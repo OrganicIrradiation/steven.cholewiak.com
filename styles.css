@@ -1,0 +1,419 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: #EEE;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    word-spacing: normal;
+    text-align: left;
+    letter-spacing: 0;
+    font-size: 10.8px;
+}
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1.8vw;
+    }
+}
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+blockquote {
+    margin-left: 2vw;
+}
+ol {
+    padding-left: 0;
+    margin-left: 4vw;
+}
+ul {
+    padding-left: 0;
+    margin-left: 4vw;
+}
+@media screen and (min-width: 900px) {
+    blockquote {
+        margin-left: 18px;
+    }
+    ol {
+        margin-left: 36px;
+    }
+    ul {
+        margin-left: 36px;
+    }
+}
+
+.bib_entry {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F4F4F4;
+    background-color: #F6F6F6;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #444;
+}
+.bib_image {
+    float: right;
+    padding-left: 0.5em;
+    line-height: 0px;
+}
+.bib_title {
+    font-weight: 700;
+    font-size: 1.0em;
+    margin-bottom: 0.1em;
+}
+.bib_info {
+    line-height: 1.25em;
+    font-size: 0.9em;
+}
+.bib_entry .bib_info .bib_journal {
+    font-style: italic;
+}
+.bib_abstract {
+    margin-top: 0.5em;
+    margin-top: 0.5em;
+    color: #333;
+    font-size: 0.9em;
+}
+.bib_entry:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #369;
+}
+a:visited {
+    color: #551a8b;
+}
+a.bib_btn,
+a.bib_btn:link {
+    color: #333;
+    background-color: #DDD;
+    font-size: 0.9em;
+    text-decoration: none;
+    padding: 0.1em 0.5em;
+    margin-right: 0.25em;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+a.bib_btn:hover,
+a.bib_btn:active {
+    background-color: #EEE;
+}
+
+#nav {
+    position: relative;
+    background: #333f4f;
+    width: 33%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+}
+/* Images from https://www.iconfinder.com/iconsets/internet-and-web-4 */
+
+
+#nav #photo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+}
+@media screen and (min-width: 900px) {
+    #nav #photo {
+        width: 300px;
+        height: 300px;
+        padding-bottom: 0;
+        background-size: 300px 300px;
+    }
+}
+.webp #nav #photo {
+    background-image: url('images/photo.webp');
+}
+.no-webp #nav #photo {
+    background-image: url('images/photo.png');
+}
+
+#nav #aboutme{
+    position: absolute;
+    top: 33.33vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #aboutme:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #aboutme {
+        top: 300px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #aboutme:hover { background-position: 0px -32px }
+}
+.webp #nav #aboutme {
+    background-image: url('images/aboutme.webp');
+}
+.no-webp #nav #aboutme {
+    background-image: url('images/aboutme.png');
+}
+
+#nav #research{
+    position: absolute;
+    top: 38.8vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #research:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #research {
+        top: 350px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #research:hover { background-position: 0px -32px }
+}
+.webp #nav #research {
+    background-image: url('images/research.webp');
+}
+.no-webp #nav #research {
+    background-image: url('images/research.png');
+}
+
+#nav #publications{
+    position: absolute;
+    top: 44.4vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #publications:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #publications {
+        top: 400px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #publications:hover { background-position: 0px -32px }
+}
+.webp #nav #publications {
+    background-image: url('images/publications.webp');
+}
+.no-webp #nav #publications {
+    background-image: url('images/publications.png');
+}
+
+#nav #demos{
+    position: absolute;
+    top: 50vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #demos:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #demos {
+        top: 450px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #demos:hover { background-position: 0px -32px }
+}
+.webp #nav #demos {
+    background-image: url('images/demos.webp');
+}
+.no-webp #nav #demos {
+    background-image: url('images/demos.png');
+}
+
+#nav #teaching{
+    position: absolute;
+    top: 55.6vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #teaching:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #teaching {
+        top: 500px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #teaching:hover { background-position: 0px -32px }
+}
+.webp #nav #teaching {
+    background-image: url('images/teaching.webp');
+}
+.no-webp #nav #teaching {
+    background-image: url('images/teaching.png');
+}
+
+#nav #social{
+    position: absolute;
+    top: 61.1vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #social:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #social {
+        top: 550px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #social:hover { background-position: 0px -32px }
+}
+.webp #nav #social {
+    background-image: url('images/soc.webp');
+}
+.no-webp #nav #social {
+    background-image: url('images/soc.png');
+}
+
+#nav #contactme{
+    position: absolute;
+    top: 66.7vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #contactme:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #contactme {
+        top: 600px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #contactme:hover { background-position: 0px -32px }
+}
+.webp #nav #contactme {
+    background-image: url('images/contactme.webp');
+}
+.no-webp #nav #contactme {
+    background-image: url('images/contactme.png');
+}
+
+#nav #downloadresume{
+    position: absolute;
+    top: 77.8vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #downloadresume:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #downloadresume {
+        top: 700px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #downloadresume:hover { background-position: 0px -32px }
+}
+.webp #nav #downloadresume {
+    background-image: url('images/downloadresume.webp');
+}
+.no-webp #nav #downloadresume {
+    background-image: url('images/downloadresume.png');
+}
+
+#nav #downloadcv{
+    position: absolute;
+    top: 83.4vw;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+#nav #downloadcv:hover { background-position: 0px -3.6vw }
+@media screen and (min-width: 900px) {
+    #nav #downloadcv {
+        top: 750px;
+        width: 300px;
+        height: 32px;
+        background-size: 300px 64px;
+    }
+    #nav #downloadcv:hover { background-position: 0px -32px }
+}
+.webp #nav #downloadcv {
+    background-image: url('images/downloadcv.webp');
+}
+.no-webp #nav #downloadcv {
+    background-image: url('images/downloadcv.png');
+}
+
+/* #nav #downloadbib{
+    position: absolute;
+    top: 750px;
+    right: 0px;
+    width: 33.33vw;
+    height: 3.55vw;
+    display:block;
+    background-position: 0px 0px;
+    background-size: 33.33vw 7.3vw;
+}
+.webp #nav #downloadbib {
+    background-image: url('images/downloadbib.webp');
+}
+.no-webp #nav #downloadbib {
+    background-image: url('images/downloadbib.png');
+}
+#nav #downloadbib:hover { background-position: 0px -32px } */
+
+#content {
+    height: 100%;
+    overflow: auto;
+}
+
+#content_body {
+    margin: 20px;
+    max-width: 700px;
+}

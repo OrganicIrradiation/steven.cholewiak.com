@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Steven A. Cholewiak, Ph.D. - Demos</title>
+    <link href="styles.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-400257-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-400257-7');
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        #nav #demos { background-position: 0px -3.6vw }
+        @media screen and (min-width: 900px) {
+            #nav #demos { background-position: 0px -32px }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="photo"></div>
+        <a href="index.html" id="aboutme"></a>
+        <a href="research.html" id="research"></a>
+        <a href="publications.html" id="publications"></a>
+        <a href="demos.html" id="demos"></a>
+        <a href="teaching.html" id="teaching"></a>
+        <a href="social.html" id="social"></a>
+        <a href="contactme.html" id="contactme"></a>
+        <a href="stevencholewiak_resume.pdf" id="downloadresume"></a>
+        <a href="stevencholewiak_cv.pdf" id="downloadcv"></a>
+    </div>
+    <div id="content">
+        <div id="content_body">
+
+            <style>
+            .demo_twocontainer {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            }
+            .twocontainer_left {
+              text-align: center;
+              margin: 5px;
+            }
+            .twocontainer_right {
+              text-align: center;
+              margin: 5px;
+            }
+            .demo_video {
+                width: 50vw;
+            }
+            @media screen and (min-width: 600px) {
+                .demo_video {
+                    width: 300px;
+                }
+            }
+            </style>
+            <h1>Demos</h1>
+
+            <h2 id="demos">Shape from Shading, Texture, and Specularity</h2>
+            <p>The visual system can readily perceive a three-dimensional object from a two-dimensional image.  I am interested in how the brain creates a 3D representation given this ambiguous input.  Here are some examples that demonstrate how the interpretations are affected different cues and their parameterizations. These examples require a modern web browser with support for WebGL.</p>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/3cues.png">
+                        <source src="videos/3cues.mp4" />
+                        <source src="videos/3cues.webmhd.webm" />
+                        <source src="videos/3cues.oggtheora.ogv" />
+                        <img src="images/thumbnails/3cues.png"/>
+                    </video>
+                    <div>3 cues: Specular, Shading, and Texture</div>
+                    </a>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/3envs.png">
+                        <source src="videos/3envs.mp4" />
+                        <source src="videos/3envs.webmhd.webm" />
+                        <source src="videos/3envs.oggtheora.ogv" />
+                        <img src="images/thumbnails/3envs.png"/>
+                    </video>
+                    <div>Natural scene light probes</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/envrotate.png">
+                        <source src="videos/envrotate.mp4" />
+                        <source src="videos/envrotate.webmhd.webm" />
+                        <source src="videos/envrotate.oggtheora.ogv" />
+                        <img src="images/thumbnails/envrotate.png"/>
+                    </video>
+                    <div>Rotating environment map</div>
+                    </a>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/envfreerotate.png">
+                        <source src="videos/envfreerotate.mp4" />
+                        <source src="videos/envfreerotate.webmhd.webm" />
+                        <source src="videos/envfreerotate.oggtheora.ogv" />
+                        <img src="images/thumbnails/envfreerotate.png"/>
+                    </video>
+                    <div>Relative rotation directions</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/envfreq.png">
+                        <source src="videos/envfreq.mp4" />
+                        <source src="videos/envfreq.webmhd.webm" />
+                        <source src="videos/envfreq.oggtheora.ogv" />
+                        <img src="images/thumbnails/envfreq.png"/>
+                    </video>
+                    <div>Effect of light probe frequency content</div>
+                    </a>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <a href="">
+                    <video class="aligncenter demo_video" autoplay muted loop playsinline poster="images/thumbnails/envfreq_12.png">
+                        <source src="videos/envfreq_12.mp4" />
+                        <source src="videos/envfreq_12.webmhd.webm" />
+                        <source src="videos/envfreq_12.oggtheora.ogv" />
+                        <img src="images/thumbnails/envfreq_12.png"/>
+                    </video>
+                    <div>Spherical harmonic light probes</div>
+                    </a>
+                </div>
+            </div>
+
+            <p>Here is a set of objects ray-traced in <a href="https://www.mitsuba-renderer.org/">Mitsuba</a> with different attributes; textured, shaded, specular, and combinations of the three.</p>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/eYJsEWoPVQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Texture only</div>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/NJLkHtMXMTw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Shading only</div>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/Ywee8iGrXGg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Specular only</div>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/J3h1AIVrR78?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Texture and Shading</div>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/C4TbiLsYCs8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Shading, Texture, and Specular</div>
+                </div>
+            </div>
+
+            <p>Now, lets take the specular object and manipulate how it moves relative to the environment. As you can see, environment and object movements can interact in interesting ways.</p>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/Ywee8iGrXGg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Object rotating, environment stationary</div>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/qbNjxuhU05g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Object stationary, environment rotating</div>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/Yt7Smm9rV3E?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Environment map rotating 2x object speed</div>
+                </div>
+
+                <div class='twocontainer_right'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/AHbXjUW6mxY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Higher speed environment map rotation</div>
+                </div>
+            </div>
+
+            <div class='demo_twocontainer'>
+                <div class='twocontainer_left'>
+                    <iframe class="demo_video" src="https://www.youtube.com/embed/pRN3v0WTEVc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div>Environment map rotation reversed</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modernizr build including the `webp` detect -->
+    <script src="js/modernizr.custom.66453.js"></script>
+</body>
+</html>
